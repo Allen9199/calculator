@@ -56,6 +56,21 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - 必须先 `git pull` 拉取远程代码
 - 禁止直接 `--force`（除非明确知道远程版本可丢弃）
 - 先用 `git fetch` + `git log` 检查远程状态
+- 提交信息格式: `feat: 新功能`、`fix: 修复bug`、`docs: 文档更新`
+
+### 代码规范
+- 变量/函数命名: 驼峰或下划线，类名用 PascalCase
+- 关键逻辑必须注释，避免冗余
+- 单一职责，一个函数不超过 50 行
+- 不提交 secrets/API Keys 到代码仓库，使用环境变量
+
+### 测试规范
+- 核心业务逻辑必须有测试覆盖
+- 测试数据使用真实/合理数据，避免硬编码
+
+### 文档规范
+- 项目必须有 README 说明安装和使用方法
+- 保持 CHANGELOG 更新记录版本变更
 
 ## External vs Internal
 
