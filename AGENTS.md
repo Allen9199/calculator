@@ -59,18 +59,35 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - 提交信息格式: `feat: 新功能`、`fix: 修复bug`、`docs: 文档更新`
 
 ### 代码规范
-- 变量/函数命名: 驼峰或下划线，类名用 PascalCase
-- 关键逻辑必须注释，避免冗余
-- 单一职责，一个函数不超过 50 行
+- 命名规范: 变量/函数用驼峰或下划线，类名用 PascalCase，常量全大写
+- 注释: 关键逻辑必须注释，避免冗余，TODO/FIXME 标记待办
+- 格式化: 统一缩进（2/4空格），行长度限制（80-120字符）
+- 函数: 单一职责，一个函数不超过 50 行
 - 不提交 secrets/API Keys 到代码仓库，使用环境变量
 
+### Git 工作流
+- 分支管理: feature/xxx 开发分支 → dev/test 测试分支 → main/master 发布
+- 提交信息格式: `feat: 新功能`、`fix: 修复bug`、`docs: 文档更新`
+- 代码审查: PR/MR 必须经过 review 才能合并
+
 ### 测试规范
-- 核心业务逻辑必须有测试覆盖
-- 测试数据使用真实/合理数据，避免硬编码
+- 单元测试: 核心业务逻辑必须有测试覆盖
+- 测试命名: `test_xxx_场景_期望结果`
+- 测试数据: 使用真实/合理数据，避免硬编码
 
 ### 文档规范
-- 项目必须有 README 说明安装和使用方法
-- 保持 CHANGELOG 更新记录版本变更
+- README: 项目说明、安装、使用方法
+- API 文档: 接口说明、参数、返回值、示例
+- CHANGELOG: 记录版本变更
+
+### 安全规范
+- 密钥管理: 不提交 secrets/API Keys 到代码仓库
+- 敏感数据: 加密存储，使用环境变量
+- 依赖安全: 定期检查漏洞
+
+### 部署规范
+- 环境分离: dev/test/prod 环境配置隔离
+- 日志: 关键操作记录日志，敏感信息脱敏
 
 ## External vs Internal
 
